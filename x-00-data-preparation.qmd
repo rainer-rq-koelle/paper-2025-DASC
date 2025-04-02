@@ -1,0 +1,25 @@
+---
+title: "Data Process"
+format: 
+  typst:
+    size: a4
+---
+
+This paper summarises the data preparatory action and methods developed for the paper.
+
+## Trajectory
+
+We tap into OSN data. A trajectory is a series of time-ordered 4D positions, i.e., TIME, LAT, LON, ALT, associated with a FLTID, and some complementary data (e.g. first derivates, special codes)
+
+Single Flight: Represent each trajectory as a 4D function
+
+$$flight_i \rightarrow T_i(t)$$
+
+$$
+T_i(t)=(x_i(t),y_i(t),z_i(t),t), 
+t \in [t_{start i},t_{end_i}]
+$$
+
+A **trajectory set** comprises multiple flights, a collection of multiple trajectories
+$$\{T_1(t), T_2(t), ... ,T_N(t)\}$$
+

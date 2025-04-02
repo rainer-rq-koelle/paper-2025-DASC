@@ -1,0 +1,114 @@
+---
+title: "Towards Measuring Operational Efficiency of Arrival Management Techniques"
+subtitle: "WORK IN PROGRESS - PAPER TO BE SUBMITTED TO DASC2025"
+format: html
+abstract: |
+  Flight efficiency in the arrival phase offers a significant benefit pool to influence
+  fuel burn and associated emissions. Today no operational performance metric 
+  exists that allows to assess the effectiveness of different arrival 
+  management techniques. 
+  This paper characterises and compares arrival management at a series of airports 
+  and develops a proposed operational performance measure combining vertical and
+  horizontal flight efficiency, including air time and associated fuel burn and 
+  emissions. While the approach focusses on the arrival phase, the concept could
+  be expanded to assess the operational efficiency of trajectory based
+  operations.
+---
+
+# Introduction
+
+Political priorities have focussed on the climate impact of air transportation and culminated in ICAO's long-term aspirational goal to substantially reduce CO2 emissions.
+From a temporal perspective, the introduction of new aircraft airframe design or novel
+propulsion technology will require substantial developments and are only a long-term
+measure. 
+The uptake of sustainable aviation fuel is still in its infancy. 
+Accordingly, increased operational efficiency may come from utilising existing benefit pools in terms of air traffic management. 
+Such benefits can be exploited immediately.
+
+Arrival operations at airports contribute to managing planning uncertainty, actual travel times, and limited runway system throughput capacity.
+This paper considers a data-driven approach to characterise and monitor the operational
+performance of arrival management in Europe, the United States, and Brazil. 
+The overall goal is to establish a performance measure that will support the assessment of constraints and the exploitation of the anticipated benefit pools by combining the classical horizontal, vertical, and temporal approaches from a trajectory perspective.
+
+Trajectory-based operations are a means to balance the utilisation of the runway system
+capacity and associated arrival traffic synchronisation. 
+The success of avoiding air traffic control interventions within the terminal airspace diminishes without utilising upstream synchronisation of arrival traffic. 
+However, upstream synchronisation activities may be subject to a variety of impact such as departing traffic or crossing and arrivals to adjacent airports.
+
+Understanding constraints on the traffic synchronisation before entering the terminal airspace will help to improve airspace and procedure design.
+This paper builds on a spatial-temporal framework for arrival management by analysing flight trajectories and aims at the identification of potential sources of inefficiencies in the wider arrival airspace. 
+The trajectory-based approach overcomes the limitations of today's operational performance monitoring metrics and allows for the inclusion of meteorological or
+airspace structure related constraints, and support to evaluate the operated sequencing
+techniques/concepts.
+
+This paper addresses the challenges of characterising and monitoring the performance of
+arrival management techniques. 
+The approach is detailed and studied on the basis of open trajectory data for a subset of airports with different arrival concepts (e.g. runway pressure/time-based separation on final, point-merge, extended arrival management) in Europe, the United States, and Brazil. 
+The modelling work includes a framework to characterise arrival management constraints. The validation of the approach has been tested based on historic open trajectory data.
+The results obtained indicate the general feasibility of the approach and its application within the different operational contexts. 
+The operational analysis support a richer discussion of efficiency increasing improvements and concepts on the local level. 
+The ability to provide spatial and temporal measures based on 4D trajectories is an enabler to assess and compare the benefits of specific arrival management techniques, address airspace design, and operational concepts. 
+This allows strategic planers and decision-makers to select from a wider range of such techniques and options.
+
+Higher levels of operational efficiency will support the quest to reduce overall emissions of air transportation and meet the environmental goals. 
+The work presented serves as a building block to develop a data-driven approach to measuring performance in the arrival phase. 
+It also reflects the development of a framework to discuss the utility of upstream arrival management techniques at different airports and required operational changes. This also offers to extent the approach and generalise it for the full trajectory.
+
+# Background
+
+## Arrival Management
+
+* what is arival management - how do we define it
+* what is done by others
+* techniques used (e.g. runway pressure/time-based separation on final, point-merge, extended arrival management) in Europe, the United States, and Brazil.
+* list some examples in the different places.
+
+## Global Air Navigation Plan - Operational Performance
+
+ICAO's Global Air Navigation Plan (GANP) proposes to measure operational performance with a set of key performance indicators (KPIs).
+The latter offer a measurement for a specific flight phase.
+There exists criticism that the ICAO KPIs do not address the gate-to-gate perspective.
+In particular, these indicators appear to be not suitable to measure trajectory-based operations (TBO).
+
+# Conceptual Approach, Data, and Methods
+
+<!-- do we do methods here> -->
+
+## Data
+
+* Open data = x months of data for airport 1 ... n, 205NM
+
+# Results and Discussion
+
+## Characterising Operations with GANP KPIs
+
+* calculate KPIs for study airports
+  + runway throughput (arrival throughput)
+  + ASMA (40NM, 100NM, 200NM)
+  + vertical flight efficiency (200NM)
+* what can we say about these airports and (measured) operations?
+* abstract speaks about meteo - can we use METAR to do something here? Possibly say something about wind-situation
+
+## Measuring Spacing Deviation
+
+:::{.callout-note} 
+
+* come up with a measurement of the realised spacing deviation
+
+:::  
+
+# Conclusions
+
+<!-- what was shown ----------------------------------------------------- -->
+
+<!-- strength and weaknesses -------------------------------------------- -->
+
+<!-- application of work     -------------------------------------------- -->
+
+<!-- future work -------------------------------------------------------- -->
+
+<!-- outlook ------------------------------------------------------------ -->
+The results of this study will be shared with the wider ICAO Performance Community for a
+potential inclusion in the next iteration of the Global Air Navigation Plan.
+
+# References {.unnumbered}
