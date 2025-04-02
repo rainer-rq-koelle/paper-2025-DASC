@@ -10,5 +10,5 @@ For questions about the project, please contact the lead author.
 
 ## action list
 
-[x] infrastructuresetup project, git, etc
+[x] infrastructuresetup project, git, etc    
 [x] principal scope defined with team to extract prepare data

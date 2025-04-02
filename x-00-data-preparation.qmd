@@ -1,5 +1,6 @@
 ---
-title: "Data Process"
+title: "Data Process - Modelling - Conventions / Methods"
+subtitle: "WORK IN PROGRESS"
 format: 
   typst:
     size: a4
@@ -23,3 +24,16 @@ $$
 A **trajectory set** comprises multiple flights, a collection of multiple trajectories
 $$\{T_1(t), T_2(t), ... ,T_N(t)\}$$
 
+## Arrival Flights - Characteristic Milestones
+
+An arrival flights is defined by the path flowm from *entry of arrival airspace* to *touchdown* at the landing runway.    
+Dependent on the data coverage, open ADSB data might not be available until touchdown. 
+For this purpose, we can define a *(landing) gate* position located about 6NM before landing runway.
+
+Conceptually, we consider a milestone the 4D position of a flight event. Thus, milestones are implicitly representing timestamped flight events (e.g. actual time of landing [ALDT]).
+
+* **entry of arrival airspace**: conceptually the first entry into the arrival airspace; for this study we define the entry at 200NM from the landing aerodrome, i.e., its aerodrome reference point (ARP)
+* **top of descent (TOD)**: a point in space from which the descent to the airport for landing is started
+* **landing gate**: a point at 6NM before the landing runway threshold; arrival procedures typically foresee a final approach fix etc.; we generalise this to be at 6NM - the actual values at different airports may vary for different arrival procedures. At this point in time the arriving flight is considered in sequence for the landing. 
+* **touchdown / actual time of landing (ALDT)**: the landing performed by the flight; dependent on data coverage this event may be detected (or needs to be estimated based on previous positions / landing profile). It must be noted that aircraft cross the end of the runway / threshold at a specific safety altitude. For example, the ground point of intercept of an ILS approach is typically located 800-1000ft after the landing threshold.    
+Note: we may approximate the ALDT as the time of (spatially) crossing the threshold.
