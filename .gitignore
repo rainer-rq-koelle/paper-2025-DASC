@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# temp stuff
+paper_files/
+figures/~$_fig*
