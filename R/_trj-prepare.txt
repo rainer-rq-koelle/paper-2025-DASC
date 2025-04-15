@@ -1,0 +1,24 @@
+#' Prepare the study data
+#' 
+#' @param .q_trj trajectory extracted by Q, comprises OSN and ECTRL
+#' 
+#' @return the cleaned trajectory
+#' @name prep_trajectory
+NULL
+
+#' @rdname prep_trajectory
+#' @return trj a clean trajector
+#' @export
+prepare_trajectory <- function(.q_trj){
+  this_trj <- .q_trj |> standardise_names()
+  
+  return(this_trj)
+}
+
+#' @rdname prep_trajectory
+#' @return trj a clean trajectory
+#' @export
+standardise_names <- function(.q_trj){
+  names(.q_trj) <- toupper(names(.q_trj))
+  return(.q_trj)
+}

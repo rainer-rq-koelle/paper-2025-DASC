@@ -6,10 +6,13 @@
 #' @param .files vector of filenames in zip-archive
 #' @param ...
 #'
-#' @return
+#' @return ds the extracted data set
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#'   read_zip()
+#' }
 read_zip <- function( .pth, .archive, .files = NULL, .path_unzip = "tmp_unzip"
                      ,.show_col_types = FALSE, ...){
     # create tmp_dir, if not existing
@@ -85,10 +88,13 @@ detect_file_extension <- function(.filename_vec){
 #' @param .colspec optional reading of selective columns
 #' @param ...
 #'
-#' @return
+#' @return df return data frame
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#'   read_csv12(file_name)
+#' }
 read_csv12 <- function(.fn, .colspec = NULL, .show_col_types = FALSE, ...){
     # test for csv or csv2
     tst <- readr::read_csv(.fn, n_max = 3, show_col_types = .show_col_types)

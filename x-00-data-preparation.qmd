@@ -37,3 +37,37 @@ Conceptually, we consider a milestone the 4D position of a flight event. Thus, m
 * **landing gate**: a point at 6NM before the landing runway threshold; arrival procedures typically foresee a final approach fix etc.; we generalise this to be at 6NM - the actual values at different airports may vary for different arrival procedures. At this point in time the arriving flight is considered in sequence for the landing. 
 * **touchdown / actual time of landing (ALDT)**: the landing performed by the flight; dependent on data coverage this event may be detected (or needs to be estimated based on previous positions / landing profile). It must be noted that aircraft cross the end of the runway / threshold at a specific safety altitude. For example, the ground point of intercept of an ILS approach is typically located 800-1000ft after the landing threshold.    
 Note: we may approximate the ALDT as the time of (spatially) crossing the threshold.
+
+# Data Prep
+
+```{r}
+# laod basic stuff
+library(ggplot2)
+ggplot2::theme_set(ggplot2::theme_minimal())
+
+devtools::load_all()  # load my functions, i.e. zip utils
+
+# get some test / development data
+pth_to_data    <- here::here(here::here() |> dirname(), "__DATA", "OSN-DASC2025-200NM")
+data_fn_names  <- check_zip_content(pth_to_data,"dasc2025-opdi-dump.zip")$Name
+
+eddf_test_fn  <- "data/*-to-EDDF/tracks_adep_*_ades_EDDF_2024-06-30.parquet"
+egll_test_fn  <- "data/*-to-EGLL/tracks_adep_*_ades_EGLL_2024-06-30.parquet"
+
+egll_trjs     <- read_zip(pth_to_data, "dasc2025-opdi-dump.zip", .files = egll_test_fn)
+eddf_trjs     <- read_zip(pth_to_data, "dasc2025-opdi-dump.zip", .files = eddf_test_fn)
+```
+
+```{r}
+tst_trjs <- egll_trjs |> 
+  dplyr::filter(track_id %in% c(
+    "c65aa5dcce090b7cc2c176491cbb2c8906fa0641a006397a98824dbc7ed2d92f_4_2024_6"
+  ))
+
+
+library(sf)
+
+tst_trjs |> 
+  ggplot() + geom_point(aes(x = lon, y = lat), size = 0.5)
+```
+
